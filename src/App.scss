@@ -1,0 +1,64 @@
+
+
+.App {
+  color: #363c5d;
+  padding: 20px 350px;
+  text-align: center;
+
+  .header {
+    font-size: 65px;
+    font-weight: 800;
+  }
+
+  .person {
+    display: inline-flex;
+    width: 200px;
+    border: 3px solid #363c5d;
+    border-radius: 5px;
+
+    div {
+      padding: 10px;
+      width: 100%;
+    }
+  }
+  .form{
+    .firstForm{
+      display: flex;
+      justify-content: space-between;
+      .firstFormBlock{
+
+        label{
+          display: block;
+          text-align: left;
+        }
+        input{
+          display: block;
+          width: 100%;
+          background: #f3f6fb;
+          border: none;
+          border-radius: 5px;
+          height: 35px;
+        }
+        .name{
+          display: flex;
+          justify-content: space-between;
+          .itemName{
+            width: 45%;
+          }
+
+        }
+      }
+    }
+    .post{
+      width: 40%;
+    }
+  }
+}
+
+.active {
+  background: #363c5d;
+  color: white;
+}
+.icon{
+  color: black;
+}
