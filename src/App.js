@@ -6,13 +6,25 @@ import {faHand, faHeart, faCreditCard} from "@fortawesome/free-regular-svg-icons
 import {faPaypal} from "@fortawesome/free-brands-svg-icons";
 
 function App() {
-    let [active, setActive] = useState(true)
+    let [activePerson, setActivePerson] = useState(true)
+    let [activeHelp, setActiveHelp] = useState(0)
+    let [activePayment, setActivePayment] = useState(0)
+    const handleFocus = (target) => {
+        if (target.value.length >= 4){
+            if(target.nextSibling)
+                target.nextSibling.focus();
+        }
+        if(target.value.length === 0){
+            if(target.previousSibling)
+                target.previousSibling.focus();
+        }
+    }
     return (
         <div className="App">
             <div className="header">Заповніть форму</div>
             <div className="person">
-                <div className={active && "active"} onClick={() => setActive(true)}>Фіз. особа</div>
-                <div className={!active && "active"} onClick={() => setActive(false)}>Юр. особа</div>
+                <div className={activePerson && "activePerson"} onClick={() => setActivePerson(true)}>Фіз. особа</div>
+                <div className={!activePerson && "activePerson"} onClick={() => setActivePerson(false)}>Юр. особа</div>
             </div>
             <div className="form">
                 <form className="firstForm">
@@ -65,80 +77,87 @@ function App() {
                         </div>
                     </div>
                 </form>
+                <div className="header">Види допомоги</div>
+                <div className="headerDescription">Ви можете змінити вид допомоги</div>
                 <form className="secondForm">
-                    <div className="header">Види допомоги</div>
-                    <div className="headerDescription">Ви можете змінити вид допомоги</div>
-                    <div>
-                        <div>
-                            <div>
-                                <div className="">
-                                    <FontAwesomeIcon icon={faHand} className="itemBank"/>
-                                </div>
-                                <label htmlFor="">Зробити</label>
+                    <div className="help">
+                        <div className={activeHelp === 1 ? "activeHelp" : "itemHelp"} onClick={() => setActiveHelp(1)}>
+                            <div className="">
+                                <FontAwesomeIcon icon={faHand} className="iconHelp"/>
                             </div>
-                            <div>
-                                <div className="">
-                                    <FontAwesomeIcon icon={faWallet} className="itemBank"/>
-                                </div>
-                                <label htmlFor="">Фінансова допомога</label>
-                            </div>
-                            <div>
-                                <div>
-                                    <FontAwesomeIcon icon={faShirt} className="itemBank"/>
-                                </div>
-                                <label htmlFor="">Матеріальна допомога</label>
-
-                            </div>
-                            <div>
-                                <div>
-                                    <FontAwesomeIcon icon={faHeart} className="itemBank"/>
-                                </div>
-                                <label htmlFor="">Волонтерство</label>
-                            </div>
+                            <label htmlFor="">Зробити</label>
                         </div>
+                        <div className={activeHelp === 2 ? "activeHelp" : "itemHelp"} onClick={() => setActiveHelp(2)}>
+                            <div className="">
+                                <FontAwesomeIcon icon={faWallet} className="iconHelp"/>
+                            </div>
+                            <label htmlFor="">Фінансова <br/> допомога</label>
+                        </div>
+                        <div className={activeHelp === 3 ? "activeHelp" : "itemHelp"} onClick={() => setActiveHelp(3)}>
+                            <div>
+                                <FontAwesomeIcon icon={faShirt} className="iconHelp"/>
+                            </div>
+                            <label htmlFor="">Матеріальна <br/> допомога</label>
+
+                        </div>
+                        <div className={activeHelp === 4 ? "activeHelp" : "itemHelp"} onClick={() => setActiveHelp(4)}>
+                            <div>
+                                <FontAwesomeIcon icon={faHeart} className="iconHelp"/>
+                            </div>
+                            <label htmlFor="">Волонтерство</label>
+                        </div>
+                    </div>
+                    <div className="bank">
                         <div>
                             <label htmlFor="bank">Спосіб оплати</label>
-                            <div>
-                                <div>
-                                    <FontAwesomeIcon icon={faCreditCard}/>
+                            <div className="paymentMethod">
+                                <div className={activePayment === 1 ? "activePayment" : "itemPayment"}
+                                     onClick={() => setActivePayment(1)}>
+                                    <FontAwesomeIcon icon={faCreditCard} className="icon"/>
                                 </div>
-                                <div>
-                                    <FontAwesomeIcon icon={faCreditCard}/>
+                                <div className={activePayment === 2 ? "activePayment" : "itemPayment"}
+                                     onClick={() => setActivePayment(2)}>
+                                    <label className="icon">Приват24</label>
                                 </div>
-                                <div>
-                                    <FontAwesomeIcon icon={faCashRegister}/>
+                                <div className={activePayment === 3 ? "activePayment" : "itemPayment"}
+                                     onClick={() => setActivePayment(3)}>
+                                    <FontAwesomeIcon icon={faCashRegister} className="icon"/>
                                 </div>
-                                <div>
-                                    <FontAwesomeIcon icon={faCashRegister}/>
+                                <div className={activePayment === 4 ? "activePayment" : "itemPayment"}
+                                     onClick={() => setActivePayment(4)}>
+                                    <label className="icon">Webmoney</label>
                                 </div>
-                                <div>
-                                    <FontAwesomeIcon icon={faPaypal}/>
+                                <div className={activePayment === 5 ? "activePayment" : "itemPayment"}
+                                     onClick={() => setActivePayment(5)}>
+                                    <FontAwesomeIcon icon={faPaypal} className="icon"/>
                                 </div>
                             </div>
-                            <div>
-                                <div className="card">
-                                    <label htmlFor="date">Введіть наступні данні</label>
-                                    <div>
-                                        <label htmlFor="numberCard">Номер карти</label>
+                        </div>
+                        <div className="cardBlock">
+                            <label htmlFor="date">Введіть наступні данні</label>
+                            <div className="card">
+                                <div className="numberCardBlock">
+                                    <label htmlFor="numberCard">Номер карти</label>
+                                    <div className="numberCard">
+                                        <input type="text" onChange={event => handleFocus(event.target)} maxLength="4"/>
+                                        <input type="text" onChange={event => handleFocus(event.target)} maxLength="4"/>
+                                        <input type="text" onChange={event => handleFocus(event.target)} maxLength="4"/>
+                                        <input type="text" onChange={event => handleFocus(event.target)} maxLength="4"/>
+                                    </div>
+                                </div>
+                                <div className="secretCardDataBlock">
+                                    <div className="secretCardData">
+                                        <div className="label">
+                                            <label htmlFor="term">Термін дії</label>
+                                        </div>
                                         <div>
-                                            <input type="text"/>
-                                            <input type="text"/>
-                                            <input type="text"/>
                                             <input type="text"/>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className="secretCardData">
+                                        <label htmlFor="code">CVC/CVV</label>
                                         <div>
-                                            <label htmlFor="term">Термін дії</label>
-                                            <div>
-                                                <input type="text"/>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label htmlFor="code">CVC/CVV</label>
-                                            <div>
-                                                <input type="text"/>
-                                            </div>
+                                            <input type="text"/>
                                         </div>
                                     </div>
                                 </div>
