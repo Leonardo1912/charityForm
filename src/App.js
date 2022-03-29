@@ -116,23 +116,38 @@ function App() {
                                <div className="paymentMethod">
                                    <div className={activePayment === 1 ? "activePayment" : "itemPayment"}
                                         onClick={() => setActivePayment(1)}>
-                                       <FontAwesomeIcon icon={faCreditCard} className="icon"/>
+                                       <div className="item">
+                                           <FontAwesomeIcon icon={faCreditCard} className="icon"/>
+                                           <div className="description">Карти Visa/MasterCard</div>
+                                       </div>
                                    </div>
                                    <div className={activePayment === 2 ? "activePayment" : "itemPayment"}
                                         onClick={() => setActivePayment(2)}>
-                                       <label className="icon">Приват24</label>
+                                       <div className="item">
+                                           <div className="text">Приват24</div>
+                                           <div  className="description">Приват24</div>
+                                       </div>
                                    </div>
                                    <div className={activePayment === 3 ? "activePayment" : "itemPayment"}
                                         onClick={() => setActivePayment(3)}>
-                                       <FontAwesomeIcon icon={faCashRegister} className="icon"/>
+                                       <div className="item">
+                                           <FontAwesomeIcon icon={faCashRegister} className="icon"/>
+                                           <div className="description">Термінали України</div>
+                                       </div>
                                    </div>
                                    <div className={activePayment === 4 ? "activePayment" : "itemPayment"}
                                         onClick={() => setActivePayment(4)}>
-                                       <label className="icon">Webmoney</label>
+                                       <div className="item">
+                                           <div className="text">WebMoney</div>
+                                           <div className="description">WebMoney</div>
+                                       </div>
                                    </div>
                                    <div className={activePayment === 5 ? "activePayment" : "itemPayment"}
                                         onClick={() => setActivePayment(5)}>
-                                       <FontAwesomeIcon icon={faPaypal} className="icon"/>
+                                       <div className="item">
+                                           <FontAwesomeIcon icon={faPaypal} className="icon"/>
+                                           <div className="description">PayPal</div>
+                                       </div>
                                    </div>
                                </div>
                            </div>
