@@ -1,163 +1,231 @@
+@media (max-width: 1300px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+
 
 .App {
   color: #363c5d;
   text-align: center;
+  margin: 0 auto;
 
-  .header {
-    font-size: 65px;
-    font-weight: 800;
-  }
+  .container {
+    padding: 0 15px;
 
-  .person {
-    display: inline-flex;
-    width: 200px;
-    border: 3px solid #363c5d;
-    border-radius: 5px;
-
-    div {
-      padding: 10px;
-      width: 100%;
+    .header {
+      font-size: 65px;
+      font-weight: 800;
     }
-  }
 
-  .form {
-    .firstForm {
-      display: flex;
-      justify-content: space-between;
+    .person {
+      display: inline-flex;
+      width: 200px;
+      border: 3px solid #363c5d;
+      border-radius: 5px;
+      margin: 10px 0;
 
-      .firstFormBlock {
-
-        label {
-          display: block;
-          text-align: left;
-        }
-
-        input {
-          display: block;
-          width: 100%;
-          background: #f3f6fb;
-          border: none;
-          border-radius: 5px;
-          height: 35px;
-        }
-
-        .name {
-          display: flex;
-          justify-content: space-between;
-
-          .itemName {
-            width: 45%;
-          }
-
-        }
+      div {
+        padding: 10px;
+        width: 100%;
       }
     }
 
-    .post {
-      width: 40%;
-    }
-  }
-
-  .secondForm {
-    .help {
-      color: #dae3ec;
-      font-size: 20px;
-      display: flex;
-      justify-content: space-between;
-
-      .itemHelp {
+    .form {
+      .firstForm {
         display: flex;
-
-        div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 3px solid #dae3ec;
-          border-radius: 10px;
-          width: 70px;
-          height: 70px;
-
-          .iconHelp {
-            font-size: 50px;
-          }
-        }
-
-        label {
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
-
-    .bank {
-      display: flex;
-      justify-content: space-between;
-
-      .paymentMethod {
-        display: flex;
-        flex-wrap: wrap;
-        width: 50vw;
-
-        .itemPayment {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 250px;
-          height: 100px;
-          background: #dae3ec;
-          border-radius: 20px;
-          margin: 15px;
-
-          .icon {
-            color: white;
-            width: 50px;
-            height: auto;
-          }
-        }
-      }
-    }
-    .cardBlock{
-      text-align: left;
-      .card{
-        border-radius: 25px;
-        background: #c8d5e5;
-        width: 600px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        padding: 20px;
-        input{
-          width: 20%;
-          height: 60px;
-          border: none;
-          border-radius: 20px;
-          font-size: 30px;
-          text-align: center;
-          background: #f3f6fb;
+        flex-wrap: wrap;
 
-        }
-        .numberCardBlock{
-          text-align: left;
-          .numberCard{
+        .firstFormBlock {
+
+          label {
+            display: block;
+            text-align: left;
+          }
+
+          input {
+            display: block;
+            width: 100%;
+            background: #f3f6fb;
+            border: none;
+            border-radius: 5px;
+            height: 35px;
+            font-size: 20px;
+            margin: 5px 0 10px 0;
+          }
+          input:hover{
+            border: 1px solid blueviolet;
+          }
+
+          .name {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
+
+            .itemName {
+              width: 45%;
+            }
+
           }
         }
       }
-      .secretCardDataBlock{
-        display: flex;
-        .secretCardData{
-          input{
-            width: 50%;
-            background: #f3f6fb;
-          }
-        }
 
+      .post {
+        width: 40%;
       }
     }
+    .headerDescription{
+      margin: 10px 0 30px;
+    }
 
+    .secondForm {
+      .help {
+        color: #dae3ec;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .itemHelp {
+          display: flex;
+
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #dae3ec;
+            border-radius: 10px;
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+
+            .iconHelp {
+              font-size: 50px;
+            }
+          }
+          div:hover{
+            background: darkgrey;
+            color: white;
+            border: none;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .bank {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+
+        .paymentMethod {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+          .itemPayment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 100px;
+            background: #dae3ec;
+            border-radius: 20px;
+            margin: 15px;
+
+            .icon {
+              color: white;
+              width: 50px;
+              height: auto;
+            }
+          }
+          .itemPayment:hover{
+            background: darkgrey;
+          }
+        }
+        .cardBlock {
+          text-align: left;
+          .card {
+            border-radius: 25px;
+            background: #c8d5e5;
+            max-width: 600px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            input {
+              width: 20%;
+              height: 60px;
+              border: none;
+              border-radius: 20px;
+              font-size: 30px;
+              text-align: center;
+              background: #f3f6fb;
+            }
+            input:hover{
+              border: 1px solid blueviolet;
+            }
+            @media (max-width: 1300px) {
+              input {
+                font-size: 20px;
+              }
+            }@media (max-width: 992px) {
+            input {
+              font-size: 20px;
+            }
+          }
+            .numberCardBlock {
+              text-align: left;
+
+              .numberCard {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+              }
+            }
+          }
+
+          .secretCardDataBlock {
+            display: flex;
+
+            .secretCardData {
+              input {
+                width: 50%;
+                background: #f3f6fb;
+              }
+            }
+
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        .bank{
+          flex-wrap: wrap;
+        }
+      }
+    }
   }
 }
 
@@ -178,6 +246,8 @@
     border-radius: 10px;
     width: 70px;
     height: 70px;
+    margin-right: 10px;
+
 
     .iconHelp {
       font-size: 50px;
@@ -190,15 +260,17 @@
     align-items: center;
   }
 }
-.activePayment{
+
+.activePayment {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 200px;
   height: 100px;
   background: #946196;
   border-radius: 20px;
   margin: 15px;
+
 
   .icon {
     color: white;
@@ -207,6 +279,6 @@
   }
 }
 
-.icon {
-  color: black;
+.activeBank {
+  display: none;
 }
