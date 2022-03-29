@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/charityForm/static/css/main.93cab7ec.css",
-    "main.js": "/charityForm/static/js/main.53758a83.js",
+    "main.css": "/charityForm/static/css/main.05e8e92e.css",
+    "main.js": "/charityForm/static/js/main.8630cf03.js",
     "static/js/787.aeb39de0.chunk.js": "/charityForm/static/js/787.aeb39de0.chunk.js",
     "index.html": "/charityForm/index.html",
-    "main.93cab7ec.css.map": "/charityForm/static/css/main.93cab7ec.css.map",
-    "main.53758a83.js.map": "/charityForm/static/js/main.53758a83.js.map",
+    "main.05e8e92e.css.map": "/charityForm/static/css/main.05e8e92e.css.map",
+    "main.8630cf03.js.map": "/charityForm/static/js/main.8630cf03.js.map",
     "787.aeb39de0.chunk.js.map": "/charityForm/static/js/787.aeb39de0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93cab7ec.css",
-    "static/js/main.53758a83.js"
+    "static/css/main.05e8e92e.css",
+    "static/js/main.8630cf03.js"
   ]
 }
