@@ -3,6 +3,7 @@
     max-width: 1100px;
   }
 }
+
 @media (max-width: 1100px) {
   .container {
     max-width: 970px;
@@ -71,7 +72,8 @@
             font-size: 20px;
             margin: 5px 0 10px 0;
           }
-          input:hover{
+
+          input:hover {
             border: 1px solid blueviolet;
           }
 
@@ -91,7 +93,8 @@
         width: 40%;
       }
     }
-    .headerDescription{
+
+    .headerDescription {
       margin: 10px 0 30px;
     }
 
@@ -120,7 +123,8 @@
               font-size: 50px;
             }
           }
-          div:hover{
+
+          div:hover {
             background: darkgrey;
             color: white;
             border: none;
@@ -154,18 +158,35 @@
             border-radius: 20px;
             margin: 15px;
 
-            .icon {
-              color: white;
-              width: 50px;
-              height: auto;
+            .item{
+              text-align: center;
+              .icon {
+                color: white;
+                width: 50px;
+                height: auto;
+              }
+
+              .text {
+                color: white;
+                font-size: 20px;
+                padding: 12px 0;
+              }
+
+              .description {
+                text-align: center;
+                color: white;
+              }
             }
           }
-          .itemPayment:hover{
+
+          .itemPayment:hover {
             background: darkgrey;
           }
         }
+
         .cardBlock {
           text-align: left;
+
           .card {
             border-radius: 25px;
             background: #c8d5e5;
@@ -175,6 +196,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 20px;
+
             input {
               width: 20%;
               height: 60px;
@@ -184,18 +206,22 @@
               text-align: center;
               background: #f3f6fb;
             }
-            input:hover{
+
+            input:hover {
               border: 1px solid blueviolet;
             }
+
             @media (max-width: 1300px) {
               input {
                 font-size: 20px;
               }
-            }@media (max-width: 992px) {
-            input {
-              font-size: 20px;
             }
-          }
+            @media (max-width: 992px) {
+              input {
+                font-size: 20px;
+              }
+            }
+
             .numberCardBlock {
               text-align: left;
 
@@ -220,8 +246,9 @@
           }
         }
       }
+
       @media (max-width: 768px) {
-        .bank{
+        .bank {
           flex-wrap: wrap;
         }
       }
@@ -271,11 +298,22 @@
   border-radius: 20px;
   margin: 15px;
 
-
-  .icon {
-    color: white;
-    width: 50px;
-    height: auto;
+  .item{
+    text-align: center;
+    .icon {
+      color: white;
+      width: 50px;
+      height: auto;
+    }
+    .text {
+      color: white;
+      font-size: 20px;
+      padding: 12px 0;
+    }
+    .description {
+      text-align: center;
+      color: white;
+    }
   }
 }
 
