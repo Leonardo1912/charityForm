@@ -76,6 +76,15 @@
           input:hover {
             border: 1px solid blueviolet;
           }
+          .company{
+            display: flex;
+            align-items: center;
+            .logo{
+              white-space: nowrap;
+              font-weight: 500;
+              color: dodgerblue;
+            }
+          }
 
           .name {
             display: flex;

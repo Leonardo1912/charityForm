@@ -42,7 +42,10 @@ function App() {
                            </div>
                            <div>
                                <label htmlFor="company">Назва компанії, організації</label>
-                               <input type="text"/>
+                               <div className="company">
+                                   <input type="text"/>
+                                   <div className="logo">+ Логотип</div>
+                               </div>
                            </div>
                            <div>
                                <label htmlFor="email">Email-адрес</label>
