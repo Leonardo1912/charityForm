@@ -184,6 +184,9 @@ function App() {
                        </div>
                    </form>
                </div>
+               <div className="button">
+                   <button>Допомогти</button>
+               </div>
            </div>
 
         </div>
